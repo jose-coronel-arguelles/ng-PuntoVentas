@@ -1,0 +1,21 @@
+<p>list of products!</p>
+
+<div *ngIf="deletedProduct?.name; else noBorrado">
+  <h3>Producto borrado: {{deletedProduct?.name}}</h3>
+</div>
+
+<ng-template #noBorrado>
+  <h3>No ha borrado nada.</h3>
+</ng-template>
+
+
+<button (click)="deleteProduct()">
+  Borrar
+</button>
+<ul>
+  <li *ngFor="let item of productsList">
+    {{item.name}}
+  </li>
+</ul>
+<br>
+
