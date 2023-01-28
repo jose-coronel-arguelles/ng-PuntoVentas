@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { ProductComponent } from '../product/product.component';
+import { IProduct } from '../product/product.component';
 
 @Component({
   selector: 'app-list',
@@ -7,7 +7,7 @@ import { ProductComponent } from '../product/product.component';
 })
 export class ListComponent{
 
-  productsList: ProductComponent[] =
+  productsList: IProduct[] =
   [
     {
       name:'Pan con chicharron',
@@ -31,7 +31,7 @@ export class ListComponent{
     }
   ];
 
-  deletedProduct?: ProductComponent;
+  deletedProduct?: IProduct;
 
   deleteProduct(){
      this.deletedProduct=this.productsList.shift();

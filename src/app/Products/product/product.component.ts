@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 
+export interface IProduct{
+    name: string;
+   description:string;
+   price:number
+}
+
 @Component({
   selector:'app-product',
   templateUrl:'product.component.html'
@@ -7,17 +13,19 @@ import { Component } from '@angular/core';
 })
 
 export class ProductComponent{
-  //name : string = 'Pan con chicharron';
-  // photo: string = 'img/pan-con-chicharron.jpg';
-  //description : string = 'Pan frances relleno con camote frito y lonjas de chicharrón mas sarza criolla.';
-  //price : number = 15.00
+  product: IProduct={
+    name:'Sandwich',
+    description: 'big sandwich with meat',
+    price: 22
+  }
 
-  // constructor(name:string, description:string, price:number){
-  // }
+  add(){
+    console.log(this.product );
+  }
+  edit(){
+    console.log(this.product);
+  }
 
-   name!: string;
-   description!:string;
-   price!:number
 }
 
 

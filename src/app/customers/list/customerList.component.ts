@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { CustomerComponent } from "../customer/customer.component";
+import { CustomerComponent, ICustomer } from '../customer/customer.component';
 
 @Component({
   selector:'app-customerList',
@@ -7,7 +7,7 @@ import { CustomerComponent } from "../customer/customer.component";
 })
 
 export class CustomerListComponent{
-  customerList: CustomerComponent[]=[
+  customerList: ICustomer[]=[
     {name:'Jose',
       lastName:'Coronel',
       dateBirth:'1987-12-20',
