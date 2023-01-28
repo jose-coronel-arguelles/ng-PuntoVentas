@@ -1,2 +1,9 @@
-<p>main-page works!</p>
+<h1>Order</h1>
 
+<form (ngSubmit)="add()">
+<input type="date" name="date" placeholder="Date" [(ngModel)]="order.date"><br>
+<input type="text" name="customerName" placeholder="Customer name" [(ngModel)]="order.customer.name"><br>
+<input type="text" name="customerLastName" placeholder="Customer last name" [(ngModel)]="order.customer.lastName"> <br>
+<input type="date" name="customerDateBirth" placeholder="Customer date birth" [(ngModel)]="order.customer.dateBirth"> <br>
+<input type="text" name="customerPhone" placeholder="Customer phone" [(ngModel)]="order.customer.phone"><br>
+</form>
