@@ -1,13 +1,12 @@
-<p>list of products!</p>
+<h2>List of Products</h2>
 
-<div *ngIf="deletedProduct?.name; else noBorrado">
+<div *ngIf="deletedProduct?.name;">
   <h3>Producto borrado: {{deletedProduct?.name}}</h3>
 </div>
 
-<ng-template #noBorrado>
+<!-- <ng-template #noBorrado>
   <h3>No ha borrado nada.</h3>
-</ng-template>
-
+</ng-template> -->
 
 <button (click)="deleteProduct()">
   Borrar

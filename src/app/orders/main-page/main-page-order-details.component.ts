@@ -1,4 +1,4 @@
-import { IProduct } from '../../Products/product/product.component';
+import { IProduct } from '../../Products/main/main-product.component';
 export interface IOrderDetails{
   id:number,
   product:IProduct,
