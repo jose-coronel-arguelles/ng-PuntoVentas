@@ -1,26 +1,27 @@
 
 import { CommonModule } from '@angular/common';
-import { CustomerComponent } from './customer/customer.component';
-import { CustomerListComponent } from './list/customerList.component';
-import { AppComponent } from '../app.component';
+import { CustomerListComponent } from './list/list-customer.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CustomerService } from './services/customer.services';
+import { CustomerAddComponent } from './add/add-customer.component';
+import { CustomerMainComponent } from './main/main-customer.component';
 
 @NgModule({
   declarations: [
-    CustomerComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    CustomerAddComponent,
+    CustomerMainComponent
   ],
   imports: [
     CommonModule,
     FormsModule
   ],
   exports: [
-    CustomerComponent,
-    CustomerListComponent
+    CustomerMainComponent
   ],
   providers: [
-    AppComponent
+    CustomerService
   ],
 })
 

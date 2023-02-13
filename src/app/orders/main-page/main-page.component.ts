@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ICustomer } from '../../customers/customer/customer.component';
+import { ICustomer } from '../../customers/add/add-customer.component';
 import { IOrderDetails } from './main-page-order-details.component';
 
 export interface IOrder{
@@ -16,7 +16,7 @@ export interface IOrder{
   templateUrl: './main-page.component.html'
 })
 
-export class MainPageComponent {
+export class CustomerComponent {
   order:IOrder={
     date: Date.now().toString(),
     orderDetail: [],

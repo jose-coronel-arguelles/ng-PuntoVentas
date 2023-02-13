@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { ProductService } from '../services/product.service';
 
 export interface IProduct{
     name: string;
@@ -8,7 +7,7 @@ export interface IProduct{
 }
 
 @Component({
-  selector:'app-main-product',
+  selector:'app-product-main',
   templateUrl:'main-product.component.html'
 })
 
@@ -19,16 +18,7 @@ export class ProductComponent{
     description: '',
     price: 0
   }
-
-  // addNewProduct( argument: IProduct){
-  //   console.log('Main Product Component');
-
-  //   this.productsList.push(argument);
-  // }
-
-  constructor(){
-
-  }
+  constructor() {}
 }
 
 

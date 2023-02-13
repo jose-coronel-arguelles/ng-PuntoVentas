@@ -1,0 +1,13 @@
+<h1>Customer</h1>
+<form (ngSubmit)="add()">
+  <input type="text" placeholder="Name" name="name" [(ngModel)]="newCustomer.name">
+  <br>
+  <input type="text" placeholder="Last Name" name="lastName" [(ngModel)]="newCustomer.lastName">
+  <br>
+  <input type="text" placeholder="Date Birth" name="dateBirth" [(ngModel)]="newCustomer.dateBirth">
+  <br>
+  <input type="text" placeholder="Phone" name="phone" [(ngModel)]="newCustomer.phone" >
+  <button>
+    Save
+  </button>
+</form>
