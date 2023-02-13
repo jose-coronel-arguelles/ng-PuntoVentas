@@ -1,13 +1,15 @@
+<h1>Products</h1>
+<hr>
+<div class="row">
+  <div class="col">
+    <app-product-list></app-product-list>
+  </div>
 
-<app-product-list
-  [productsList]="productsList">
-</app-product-list>
+  <div class="col">
+      <app-product-add></app-product-add>
+  </div>
+</div>
 
-<app-add
-  [newProduct]="newProduct"
-  (onNewProduct)="addNewProduct( $event )"
-  >
-</app-add>
 
 
 

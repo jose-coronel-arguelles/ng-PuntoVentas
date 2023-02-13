@@ -1,11 +1,10 @@
-<h1>Products</h1>
-<h3>Add new</h3>
+<h3>Products <small>{{newProduct.name}}</small></h3>
 <form (ngSubmit)="add()">
 <br><input type="text" placeholder="Name" name="name" [(ngModel)]="newProduct.name">
 <br><input type="text" placeholder="Description" name="description" [(ngModel)]="newProduct.description">
 <br><input type="number" placeholder="Price" name="price" [(ngModel)]="newProduct.price">
 <br> <small>{{newProduct.name}}</small>
 
-<button>
-    Save
+<button type="submit">
+    Add
 </button>

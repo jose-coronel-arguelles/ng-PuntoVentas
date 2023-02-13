@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IProduct } from '../main/main-product.component';
+import { ProductService } from '../services/product.service';
 
 @Component({
-  selector: 'app-add',
+  selector: 'app-product-add',
   templateUrl: './add-product.component.html'
 })
 export class AddComponent {
@@ -12,14 +13,17 @@ export class AddComponent {
     description: '',
     price: 0
   }
-  @Output() onNewProduct: EventEmitter<IProduct> = new EventEmitter();
+
+  constructor(private productoService: ProductService ){
+
+  }
+
+  // @Output() onNewProduct: EventEmitter<IProduct> = new EventEmitter();
 
   add(){
     if (this.newProduct.name.trim().length===0) {return;}
 
-    console.log(this.newProduct );
-
-    this.onNewProduct.emit(this.newProduct);
+    this.productoService.add(this.newProduct);
 
     this.newProduct={
       name:'',
@@ -27,12 +31,6 @@ export class AddComponent {
       price: 0
     }
   }
-  edit(){
-    console.log(this.newProduct);
-  }
 
-}
-function output() {
-  throw new Error('Function not implemented.');
 }
 

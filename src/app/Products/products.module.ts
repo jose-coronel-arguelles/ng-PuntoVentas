@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './list/list-product.component';
 import { ProductComponent } from './main/main-product.component';
 import { AddComponent } from './add/add-product.component';
+import { ProductService } from './services/product.service';
 @NgModule({
   declarations:[
     ProductComponent,
@@ -17,6 +18,9 @@ import { AddComponent } from './add/add-product.component';
     CommonModule,
     FormsModule
   ],
+  providers:[
+    ProductService
+  ]
 })
 
 export class ProductsModule{
